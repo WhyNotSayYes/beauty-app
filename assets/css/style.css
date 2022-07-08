@@ -82,6 +82,12 @@ h2 {
 	font-size: 40px;
 	line-height: 150%;
 }
+h5 {
+	font-weight: 700;
+	font-size: 40px;
+	text-align: center;
+	letter-spacing: 0.03em;
+}
 /*=========Header=========*/
 
 .header {
@@ -255,6 +261,12 @@ h2 {
 .padding-top {
 	padding-top: 29px;
 }
+.margin-top-100px {
+	margin-top: 100px;
+}
+.margin-bottom-100px {
+	margin-bottom: 100px;
+}
 .why__article_p:not(:last-child) {
 	margin-bottom: 20px;
 }
@@ -298,6 +310,8 @@ h2 {
 .padding__left {
 	padding-left: 70px;
 }
+
+
 /*=========Objectives=========*/
 .main__objectives {
 }
@@ -400,7 +414,91 @@ h2 {
     height: 100%;
 	z-index: -1;
 }
-/*=========Slider=========*/
+
+/*=========Functions=========*/
+.main__functions {
+}
+.functions {
+	padding: 85px 0;
+	position: relative;
+	margin-top: 100px;
+}
+.functions__container {
+}
+.functions__title {
+	font-weight: 700;
+	font-size: 26px;
+	line-height: 39px;
+	text-align: justify;
+	letter-spacing: 0.04em;
+	color: #FFFFFF;
+}
+.functions__content {
+	display: flex;
+	margin-top: 85px;
+}
+.functions__list {
+	flex: 0 1 50%;
+}
+.functions__list > *:not(:last-child) {
+	margin-bottom: 30px;
+}
+.functions__item {
+	background: #FFFFFF;
+	box-shadow: 0px 8px 4px rgba(0, 0, 0, 0.25), 0px 15px 200px rgba(110, 31, 111, 0.5), 0px 8px 100px #5E4459;
+	border-radius: 28px;
+	padding: 29px 41px;
+	max-width: 476px;
+	text-align: center;
+}
+.functions__image {
+	position: relative;
+	flex: 0 1 50%;
+	text-align: center;
+}
+.functions__image_phone {
+	position: absolute;
+	top: -50px;
+	right: 125px;
+}
+
+.functions__list-advantages {
+	margin-top: 100px;
+}
+.functions__list-advantages_item {
+}
+.item-advantages {
+	display: flex;
+	align-items: center;
+}
+.item-advantages:not(:last-child) {
+	margin-bottom: 25px;
+}
+.item-advantages__image {
+	padding-right: 30px;
+}
+.item-advantages__title {
+}
+.functions__background {
+	position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+	z-index: -1;
+}
+/*=========Portfolio=========*/
+.main__portfolio {
+}
+.porftolio {
+}
+.portfolio__container {
+}
+.portfolio__title {
+	margin-top: 65px;
+}
+
+
 .slick-list {
 	overflow: hidden;
 }
@@ -409,6 +507,7 @@ h2 {
 }
 .slider {
 	overflow: hidden;
+	margin-top: 35px;
 }
 .slider__item {
 
