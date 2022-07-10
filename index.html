@@ -15,20 +15,20 @@
         <header class="header">
             <div class="header__container container">
                 <div class="header__logo">
-                    <img src="assets/img/logo.png" alt="logo">
+                    <img src="assets/img/me=logo.png" alt="logo">
                 </div>
                 <nav class="header__menu">
-                    <ul class="header__list">
-                        <li class="header__item"><a href="" class="header__link">Главная</a></li>
-                        <li class="header__item"><a href="" class="header__link">Обо мне</a></li>
-                        <li class="header__item"><a href="" class="header__link">Портфолио</a></li>
-                        <li class="header__item"><a href="" class="header__link">Контакты</a></li>
+                    <ul id="header__list" class="header__list">
+                        <li class="header__item"><a href="#welcome" data-scroll="#welcome" class="header__link">Главная</a></li>
+                        <li class="header__item"><a href="#about" data-scroll="#about" class="header__link">Обо мне</a></li>
+                        <li class="header__item"><a href="#portfolio" data-scroll="#portfolio" class="header__link">Портфолио</a></li>
+                        <li class="header__item"><a href="#contacts" data-scroll="#contacts" class="header__link">Контакты</a></li>
                     </ul>
                 </nav>
             </div>
         </header>
         <main class="main">
-            <div class="main__welcome welcome">
+            <section id="welcome" class="main__welcome welcome">
                 <div class="welcome__container container">
                     <div class="welcome__content">
                         <div class="welcome__text">
@@ -51,17 +51,19 @@
                             <img class="welcome__telephone" src="assets/img/welcome/welcome_telephone.png" alt="welcome_telephone">
                         </div>
                     </div>
-                    <div class="welcome__arrow-down">
-                        <div class="arrow-down_img">
-                            <img src="assets/img/welcome/arrow-down-bg.png" alt="arrow-down-bg">
-                        </div>
-                    </div>
+                    <button class="welcome__arrow-down">
+                        <a href="#why" data-scroll="#why">
+                            <div class="arrow-down_img"> 
+                                <img src="assets/img/welcome/arrow-down-bg.png" alt="arrow-down-bg">
+                            </div>
+                        </a>
+                    </button>
                 </div>
                 <div class="welcome__background _ibg">
                     <img src="assets/img/welcome/background.png" alt="background">
                 </div>
-            </div>
-            <div class="main__why why">
+            </section>
+            <section id="why" class="main__why why">
                 <div class="why__pt1 container">
                     <div class="why__image">
                         <img src="assets/img/why/why-image-1.png" alt="why-image-1">
@@ -254,8 +256,8 @@
                     </div> 
                 </div>
                 
-            </div>
-            <div class="main__functions functions">
+            </section>
+            <section class="main__functions functions">
                 <div class="functions__container container">
                     <h4 class="functions__title">
                         Функционал приложения может быть разным, в зависимости от особенностей бизнеса. Но в большинстве случаев он включает:
@@ -318,11 +320,11 @@
                 <div class="functions__background _ibg">
                     <img src="assets/img/functions/functions-background.png" alt="functions-background">
                 </div>
-            </div>
-            <div class="main__portfolio porftolio">
+            </section>
+            <section id="portfolio" class="main__portfolio porftolio">
                 <div class="portfolio__container container">
                     <h5 class="portfolio__title">
-                        Портфолио
+                        ПОРТФОЛИО
                     </h5>
                     <div class="slider">
                         <div class="slider__item">
@@ -350,8 +352,8 @@
                         <div class="slider__descr_item">Очень длинное описание. Ну ооооооочень длинннннннное 3</div>
                     </div>
                 </div>
-            </div>
-            <div class="main__subscribe subscribe">
+            </section>
+            <section class="main__subscribe subscribe">
                 <div class="subscribe__container container">
                     <form action="#" id="form" class="subscribe__form">
                         <h5 class="subscribe__title">ЧТОБЫ ПОЛУЧИТЬ БЕСПЛАТНУЮ КОНСУЛЬТАЦИЮ ЗАПОЛНИТЕ ФОРМУ НИЖЕ</h5>
@@ -365,8 +367,8 @@
                         <img class="subscribe__bg_img" src="assets/img/subscribe/subscribe_bg.png" alt="subscribe_bg">
                     </div>
                 </div>
-            </div>
-            <div class="main__about about">
+            </section>
+            <section id="about" class="main__about about">
                 <div class="about__container container">
                     <div class="about__text-block">
                         <h5 class="about__title">ОБО МНЕ</h5>
@@ -378,9 +380,9 @@
                         <img class="about__image_img" src="assets/img/about/me.png" alt="me">
                     </div>
                 </div>
-            </div>
+            </section>
         </main>
-        <footer class="footer">
+        <footer id="contacts" class="footer">
             <div class="footer__container container">
                 <div class="footer__row-1">
                     <ul class="footer__column">
@@ -419,10 +421,13 @@
     <script src="assets/js/validation.js"></script>
 
     <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/sticky-header.js"></script>
+    <script src="assets/js/active-menu.js"></script>
     <script src="assets/js/typed.min.js"></script>
     <script src="assets/js/autotext.js"></script>
     <script src="assets/js/slick.js"></script>
     <script src="assets/js/slider.js"></script>
     <script src="assets/js/readMore.js"></script>
+    <script src="assets/js/scroll.js"></script>
 </body>
 </html>
