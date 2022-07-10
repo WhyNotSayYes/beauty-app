@@ -40,7 +40,9 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 
 
 /*=========General=========*/
-
+body.lock {
+	overflow: hidden;
+}
 .red-button {
 	border-radius: 25px;
 	background: #E62E2D;
@@ -197,13 +199,15 @@ header.sticky .header__link {
 	margin-top: 80px;
 	width: 425px;
 	min-height: 76px;
-	font-weight: 600;
-	font-size: 24px;
-	line-height: 150%;
 	display: flex;
 	align-items: center;
 	text-align: center;
 	justify-content: center;
+}
+.welcome__button_link {
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 150%;
 	letter-spacing: 0.05em;
 	color: #FFFFFF;
 }
@@ -819,4 +823,99 @@ header.sticky .header__link {
 	line-height: 150%;
 	color: #FFFFFF;
 	text-decoration: underline;
+}
+
+/*=========Modal with subscribe form=========*/
+.popup {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.788);
+	z-index: 51;
+	opacity: 0;
+	visibility: hidden;
+	overflow-y: auto;
+	overflow-x: hidden;
+	transition: .8s ease;
+}
+.popup.open {
+	opacity: 1;
+	visibility: visible;
+}
+.popup__body {
+	min-height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 10px 30px;
+}
+.popup__content {
+	background: #FFFFFF;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 24px;
+	padding: 65px 75px;
+	position: relative;
+	transform: scale(0);
+	transition: .8s ease;
+}
+.popup.open .popup__content {
+	transform: scale(1);
+}
+.popup__close {
+	position: absolute;
+	right: 29px;
+	top: 27px;
+}
+.popup__title {
+	font-weight: 700;
+	font-size: 28px;
+	line-height: 150%;
+	text-align: center;
+	letter-spacing: 0.06em;
+	max-width: 528px;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+}
+.popup__subscribe-popup {
+}
+.popup-subscribe {
+	display: flex;
+	flex-direction: column;
+}
+.popup-subscribe__input-wrapper {
+	margin: 0 auto;
+}
+.popup-subscribe_input {
+	background: #FFFFFF;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.35);
+	border-radius: 20px;
+	font-size: 20px;
+	line-height: 150%;
+	letter-spacing: 0.02em;
+	padding: 12px 35px;
+	width: 435px;
+}
+.popup-subscribe_input:not(:last-child) {
+	margin-bottom: 20px;
+}
+.popup-subscribe_input:last-child {
+	margin-bottom: 30px;
+}
+.popup-subscribe_input._error {
+	background: rgba(255, 0, 0, 0.459);
+}
+.popup-subscribe_input._error::placeholder{
+	color: #fff;
+}
+.popup-subscribe_button {
+	padding: 12px 41px;
+	margin: 0 auto;
+	font-size: 24px;
+	font-weight: 600;
+	line-height: 150%;
+	letter-spacing: 0.05em;
+	color: #FFFFFF;
 }

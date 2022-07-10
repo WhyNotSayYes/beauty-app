@@ -12,7 +12,7 @@
 </head>
 <body>
     <div class="wrapper">
-        <header class="header">
+        <header class="header lock-padding">
             <div class="header__container container">
                 <div class="header__logo">
                     <img src="assets/img/me=logo.png" alt="logo">
@@ -44,7 +44,9 @@
                             <p class="welcome__subtitle emerging-from-bottom">
                                 Увеличьте ваш доход с помощью мобильного приложения<br> для салона красоты
                             </p>
-                            <button class="welcome__button red-button emerging-from-bottom">Получить консультацию</button>
+                            <button class="welcome__button red-button emerging-from-bottom">
+                                <a href="#popup" class="welcome__button_link popup-link">Получить консультацию</a>
+                            </button>
                         </div>
                         <div class="welcome__image">
                             <img src="assets/img/welcome/welcome_image.png" alt="welcome_image" class="welcome__image_img">
@@ -417,8 +419,33 @@
                 </div>
         </footer>
     </div>
+
+    <!-- Modals -->
+
+        <!-- Modal with subscribe form -->
+    <div class="popup" id="popup">
+        <div class="popup__body">
+            <form action="#" id="form" class="popup__content">
+                <a href="#" class="popup__close close-popup">
+                    <img src="assets/img/modal/close.png" alt="close">
+                </a>
+                <div class="popup__title">Чтобы получить бесплатную консультацию заполните форму ниже</div>
+                <div class="popup__subscribe-popup popup-subscribe">
+                    <div class="popup-subscribe__input-wrapper">
+                        <input type="text" name="name" placeholder="Ваше имя" class="popup-subscribe_input _req">
+                    </div>
+                    <div class="popup-subscribe__input-wrapper">
+                        <input type="text" name="email" placeholder="Ваш e-mail" class="popup-subscribe_input _req _email">
+                    </div>
+                    <button type="submit" class="popup-subscribe_button red-button">Бесплатная консультация</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
     <script src="assets/js/emerging.js"></script>
     <script src="assets/js/validation.js"></script>
+    <script src="assets/js/modal.js"></script>
 
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/sticky-header.js"></script>
