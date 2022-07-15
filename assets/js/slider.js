@@ -10,6 +10,19 @@ $(document).ready(function(){
         initialSlide: 1,
         dots: true,
         asNavFor: '.slider__descr',
+        responsive: [
+            {
+                breakpoint: 900,
+                settings: {
+                    slidesToShow: 1,
+                },
+                breakpoint: 588,
+                settings: {
+                    variableWidth: false,
+                    centerMode: false,
+                }
+            }
+        ]
     });
     $('.slider__descr').slick({
         slidesToShow: 1,
@@ -21,6 +34,10 @@ $(document).ready(function(){
         fade: true,
         cssEase: 'linear',
     });
+    $('.slider-588').slick({
+        arrows: false,
+        dots: true,
+    })
 
 })
 
