@@ -1,3 +1,7 @@
+/*
+Theme Name: Vitaliy
+*/
+
 /*=========Null=========*/
 
 *{
@@ -131,9 +135,10 @@ h5 {
 	display: none;
 
 }
-.header__logo {
+.header__logo,
+.custom-logo-link {
 	padding-top: 40px;
-	flex: 0 0 103px;
+	flex: 0 0 104px;
 }
 /* .header__logo img {
 	max-width: 100%;
@@ -144,15 +149,19 @@ h5 {
 .header__list {
 	display: flex;
 }
-.header__item {
+.header__item,
+.header__list li {
 }
-.header__item:not(:last-child) {
+.header__item:not(:last-child),
+.header__list li:not(:last-child) {
 	margin: 0 70px 0 0;
 }
-.header__link.active {
+.header__link.active,
+.header__list a.active {
 	text-decoration: underline;
 }
-.header__link {
+.header__link,
+.header__list a {
 	font-size: 26px;
 	line-height: 150%;
 	color: #FFFFFF;
@@ -161,11 +170,13 @@ h5 {
 	.header__container {
 		height: 80px;
 	}
-	.header__logo {
+	.header__logo,
+	.custom-logo-link {
 		padding-top: 15px;
 		flex: 0 0 60px;
 	}
-	.header__link {
+	.header__link,
+	.header__list a {
 		font-size: 20px;
 		line-height: 150%;
 		color: #FFFFFF;
@@ -179,22 +190,28 @@ h5 {
 	header.sticky {
 		height: 60px;
 	}
-	.header__logo img {
+	.header__logo img,
+	.custom-logo-link img {
 		max-width: 100%;
 	}
-	header.sticky .header__logo {
+	header.sticky .header__logo,
+	header.sticky .custom-logo-link {
 		padding-top: 10px;
 	}
-	header.sticky .header__logo img{
+	header.sticky .header__logo img,
+	header.sticky .custom-logo-link img {
 		transform: scale(.5) translateY(-60%);
+		max-width: none;
 	}
 	header.sticky .header__menu {
 		padding-top: 20px;
 	}
-	header.sticky .header__link {
+	header.sticky .header__link,
+	header.sticky .header__list a {
 		font-size: 20px;
 	}
-	.header__logo, .header__menu, .header__link {
+	.header__logo, .header__menu, .header__link, .header__list a,
+	.custom-logo-link {
 		transition: .3s ease;
 	}
 }
@@ -208,7 +225,8 @@ h5 {
 		flex-direction: row-reverse;
 		align-items:center;
 	}
-	.header__logo img {
+	.header__logo img,
+	.custom-logo-link img {
 		max-width: 100%;
 	}
 	.header__burger {
@@ -245,7 +263,7 @@ h5 {
 	.active span {
 	}
 	.header__burger.active span {
-		background: url(../img/close-burger.png) 0 0 no-repeat;
+		background: url(assets/img/close-burger.png) 0 0 no-repeat;
 		width: 25px;
 		height: 25px;
 	}
@@ -258,7 +276,8 @@ h5 {
 		transform: translateX(100%);
 		opacity: 0;
 	}
-	.header__logo {
+	.header__logo,
+	.custom-logo-link {
 		padding: 0;
 		flex: 0 0 50px;
 	}
@@ -282,16 +301,20 @@ h5 {
 		display: block;
 		margin-left: 27px;
 	}
-	.header__item:not(:last-child) {
+	.header__item:not(:last-child),
+	.header__list li:not(:last-child) {
 		margin: 0 0 17px 0 ;
 	}
-	.header__item:first-child {
+	.header__item:first-child,
+	.header__list li:first-child {
 		margin: 17px 0 ;
 	}
-	.header__item:last-child {
+	.header__item:last-child,
+	.header__list li:last-child {
 		margin: 0 0 24px 0 ;
 	}
-	.header__link {
+	.header__link,
+	.header__list a {
 		font-weight: 500;
 		font-size: 18px;
 	}
@@ -393,7 +416,7 @@ h5 {
 	top: 50%;
 	left: 0;
 	z-index: 2;
-	background: url(../img/welcome/arrow.png) no-repeat center;
+	background: url(assets/img/welcome/arrow.png) no-repeat center;
 	width: 100%;
 	height: 27px;
 }
@@ -834,7 +857,7 @@ h3 {
 }
 .advantages__item:before {
 	content: '';
-	background: url(../img/advantages/advantages-icon.png) no-repeat center;
+	background: url(assets/img/advantages/advantages-icon.png) no-repeat center;
 	width: 37px;
 	height: 44px;
 	position: absolute;
@@ -1679,4 +1702,51 @@ h4 {
 .popup-thnx__text {
 	max-width: 476px;
 	margin-top: 18px;
+}
+
+@media (max-width: 1200px) {
+	.popup-subscribe_button, 
+	.popup-subscribe_input {
+		font-size: 18px;
+	}
+}
+@media(max-width: 992px) {
+	.popup__body {
+		padding: 0;
+	}
+	.popup__content {
+		border-radius: 0;
+		width: 100%;
+		height: 100%;
+	}
+	.popup__title {
+		max-width: none;
+	}
+}
+@media(max-width: 794px) {
+	.popup__title {
+		font-size: 28px;
+	}
+	.popup__content {
+		padding: 65px 15px;
+	}
+}
+@media (max-width: 546px) {
+	.popup__title {
+		font-size: 20px;
+	}
+	.popup-subscribe_input {
+		width: 100%;
+	}
+	.popup-subscribe_button, 
+	.popup-subscribe_input {
+		font-size: 16px;
+	}
+	.popup__close {
+		top: 15px;
+		right: 15px;
+	}
+	.popup__close img {
+		width: 60%;
+	}
 }
